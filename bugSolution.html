@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+
+  <script>
+    // Correct way to ensure text replacement. Use a DOMContentLoaded event listener
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById("myDiv").textContent = "New text";
+       document.getElementById('myDiv').innerHTML = "New text";
+    });
+  </script>
+</body>
+</html>
