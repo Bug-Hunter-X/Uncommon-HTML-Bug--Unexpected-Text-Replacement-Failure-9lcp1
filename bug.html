@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+
+  <script>
+    //Incorrect way to replace text content. This will not throw an error but will not replace the content of the div
+    document.getElementById("myDiv").textContent = "New text";
+    document.getElementById('myDiv').innerHTML = "New text";
+  </script>
+</body>
+</html>
